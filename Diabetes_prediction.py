@@ -8,7 +8,7 @@ import streamlit as st
 
 
 # loading the saved model
-loaded_model = pickle.load(open(r"C:\Users\JUZbox\Pandas_ai_folder\Diabetes_prediction\trained_model.sav",'rb'))
+loaded_model = pickle.load(open("trained_model.sav",'rb'))
 
 # creating a function for Prediction
 def diabetes_prediction(input_data):
@@ -29,7 +29,7 @@ def diabetes_prediction(input_data):
 
 def main():
     #display image
-    img = Image.open(r"C:\Users\JUZbox\Pandas_ai_folder\Diabetes_prediction\WhatsApp Image 2024-03-17 at 15.37.26_a36677d9.jpg")
+    img = Image.open("Diabetes.jpg")
     new_image = img.resize((700, 200))
     st.image(new_image)
     # lets display
